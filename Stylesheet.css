@@ -1,18 +1,36 @@
 body{
-	background-color : #be65d0;
+	background-color : #EFF9E5;
 	}
 	
-h1{
-	background-color :;
-	text-align : center;
-	font-family : Times New Roman;
-	font-size : 3em;
+h1 { 
+	color: #7c795d; 
+	font-family: Trocchi, serif; 
+	font-size: 45px; 
+	font-weight: normal; 
+	line-height: 48px; 
+	margin: 2% 15%;
+	text-align: center;
 	}
+
+.subheader { 
+	color: #ffcc66; 
+	font-family: Source Sans Pro, sans-serif; 
+	font-size: 28px; 
+	font-weight: 400; 
+	line-height: 32px; 
+	margin: 0 25%;
+	text-align: center;	
+	border-bottom : 2px Solid #C5D8D5;
+	}
+	
+
 	
 p{
-	color : white;
-	background-color : black;
-	text align : center-left;
-	font-family: Comic Sans MS;
-	font-size : 1em;
+	color : #EFF9E5;
+	margin: 0% 15%;
+	font-family: Lucida Sans Unicode, sans serif;
 	}
+
+p#p1{
+
+}
