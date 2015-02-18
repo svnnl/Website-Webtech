@@ -1,6 +1,6 @@
-body{
+body {
 	background-color : #EFF9E5;
-	}
+}
 	
 h1 { 
 	color: #7c795d; 
@@ -10,7 +10,7 @@ h1 {
 	line-height: 48px; 
 	margin: 2% 15%;
 	text-align: center;
-	}
+}
 
 .subheader { 
 	color: #ffcc66; 
@@ -21,16 +21,14 @@ h1 {
 	margin: 0 25%;
 	text-align: center;	
 	border-bottom : 2px Solid #C5D8D5;
-	}
+}
 	
-
-	
-p{
+p {
 	color : #EFF9E5;
 	margin: 0% 15%;
 	font-family: Lucida Sans Unicode, sans serif;
-	}
+}
 
-p#p1{
+p#p1 {
 
 }
