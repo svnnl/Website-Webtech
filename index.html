@@ -2,17 +2,36 @@
 <html>
 <head>
 	<title>SGML Paper</title>
-	<link rel = "Stylesheet" type = "text/css" href = "style.css" >
+	<link rel = "Stylesheet" type = "text/css" href = "style.css">
+	<script language="javascript" type="text/javascript" src="js/jquery/jquery.js"></script>
+	<script language="javascript" type="text/javascript" src="js/jquery-ui/jquery-ui.js"></script>
+	<script language="javascript" type="text/javascript" src="js/flot/jquery.flot.js"></script>
 </head>
 <body>
-	<h1>
-		SGML
-	</h1>
-	<h2 class="subheader">
-		De moeder van alle markup talen
-	</h2>
-	<p id = "p1">
-
-	</p>
+	<div id="wrapper">
+		<div id="top">
+			<h1 id="header">
+				SGML
+			</h1>
+			<h2 id="subheader">
+				De moeder van alle markup talen
+			</h2>
+		</div>
+		<div id="content">
+			<div id="index">
+				<h3>Hoofdstuk 1</h3>
+				<div>
+					Hoi dit is H1.
+				</div>
+				<h3>Hoofdstuk 2</h3>
+				<div>
+					Dag.
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		$("#index").accordion();
+	</script>
 </body>
 </html>
