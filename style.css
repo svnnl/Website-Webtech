@@ -1,5 +1,16 @@
 body {
-	background-color : #EFF9E5;
+	background-color : #eff9e5;
+}
+
+h1, h2, h3 {
+	color: #7c795d;
+	font-weight: normal;
+	font-family: 'Trocchi', serif;
+}
+
+p {
+	color : #222222;
+	font-family: Lucida Sans Unicode, sans serif;
 }
 	
 #wrapper {
@@ -8,33 +19,41 @@ body {
 	margin-right: auto;
 }
 
-#header { 
-	color: #7c795d; 
-	font-family: Trocchi, serif; 
-	font-size: 45px; 
+#header {
+	font-family: 'Raleway', serif;
+	font-size: 60px; 
 	font-weight: normal; 
 	line-height: 48px; 
 	margin-top: 2%;
-	margin-bottom: 2%;
+	margin-bottom: -20px;
 	text-align: center;
 }
 
 #subheader { 
-	color: #ffcc66; 
-	font-family: Source Sans Pro, sans-serif; 
-	font-size: 28px; 
+	color: #bb8822; 
+	font-family: 'Raleway', serif;
+	font-size: 30px; 
 	font-weight: 400; 
-	line-height: 32px; 
-	text-align: center;	
+	line-height: 50px; 
+	text-align: center;
 	border-bottom : 1px Solid #C5D8D5;
 }
+
+.ui-state-focus {
+	/* Remove focus outline in accordion. */
+	outline: none;
+}
 	
-p {
-	color : #EFF9E5;
-	margin: 0% 15%;
-	font-family: Lucida Sans Unicode, sans serif;
+.ui-accordion-header {
+	margin-left: -20px;
+	padding-left: 60px;
+	background: 0.8em url('images/icon-chapter-closed.png') no-repeat;
 }
 
-p#p1 {
+.ui-accordion-header.ui-accordion-header-active {
+	background: 0.8em url('images/icon-chapter-open.png') no-repeat;
+}
+
+.ui-accordion-content {
 
 }
