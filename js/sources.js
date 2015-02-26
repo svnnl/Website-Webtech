@@ -1,16 +1,15 @@
-function gen_sources(elemscan, elemdst) {
-	var sources = list_sources();
-	
+function gen_sources(elemscan) {
+	var sources = list_sources(elemscan);
+	$.each(sources, function(i, value) {
+		var elem_source = "<li><a href='" + value.attr("href") + "'>" + value.attr("title") + "</li>";
+		$("div#sources ol").append(elem_source);
+	});
 }
 
 function list_sources(elemscan) {
 	var sources = []
-	$(elemscan).each(function() {
-		if ($(this).is("a")) {
-			sources.push($(this));
-		} else {
-			sources = concat(sources, list_sources($(this)));
-		}
+	$(elemscan).find("a").each(function() {
+		sources.push($(this));
 	});
 	return sources;
 }
