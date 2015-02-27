@@ -2,35 +2,53 @@
 <html>
 <head>
 	<title>SGML Paper</title>
-	<link rel = "Stylesheet" type = "text/css" href = "style.css">
-	<link href='http://fonts.googleapis.com/css?family=Trocchi' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Raleway:200' rel='stylesheet' type='text/css'>
+	
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
+	<link rel="stylesheet" type="text/css" href="styles/index.css">
+
 	<script language="javascript" type="text/javascript" src="js/jquery/jquery.js"></script>
 	<script language="javascript" type="text/javascript" src="js/jquery-ui/jquery-ui.js"></script>
 	<script language="javascript" type="text/javascript" src="js/flot/jquery.flot.js"></script>
 	<script language="javascript" type="text/javascript" src="js/navigation.js"></script>
 	<script language="javascript" type="text/javascript" src="js/sources.js"></script>
 	<script language="javascript" type="text/javascript" src="js/index.js"></script>
+	
 	<script language="javascript" type="text/javascript">
-		$(document).ready(function() {
-			navigate_to("Inhoudsopgave");
-		});
+		// Fires when the page is loaded, but also when the
+		// hash has changed, which happens after a back/forward
+		// navigation or manually given hash.
+		window.onload = function() {
+			if (window.location.hash == "") {
+				// Navigate to default location
+				navigate_to("Inhoudsopgave");
+			} else {
+				navigate_to(window.location.hash.substring(1));
+			}
+		};
 	</script>
+	
+	<!-- External fonts used by the site, loaded from Google -->
+	<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Trocchi'>
+	<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Raleway:200'>
+	<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Raleway:400'>
 </head>
 <body>
 	<div id="wrapper">
 		<div id="top">
-			<h1 id="header">
+			<h1 id="header" onclick="javascript:navigate_to('inhoudsopgave');">
 				SGML
 			</h1>
 			<h2 id="subheader">
 				De moeder van alle markup talen
 			</h2>
 		</div>
+		<a class="toindex" onclick="javascript:navigate_to('inhoudsopgave');">&#8592; Terug naar inhoudsopgave...</a>
 		<div id="content">
-			<!-- Load data using the navigate_to().
-				 A default page will be loaded in the ready() handler. -->
+			<!-- Load data using the navigate_to() method. -->
 		</div>
+	</div>
+	<div id="footer">
+		<span>Made by Gerwin van der Lugt & Sebastiaan van Nijen</span>
 	</div>
 </body>
 </html>

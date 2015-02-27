@@ -1,0 +1,47 @@
+div#index {
+	font-family: 'Raleway', serif;
+	font-weight: 600;
+}
+
+div#index h2 {
+	font-family: 'Raleway', serif;
+	font-weight: 400;
+	color: black;
+	font-size: 18px;
+}
+
+div#index a {
+	display: block;
+	cursor: pointer;
+	color: black;
+	font-size: 14px;
+	margin-left: 40px;
+	margin-bottom: 6px;
+}
+
+div#index a.top {
+	font-weight: bold;
+	margin-bottom: 12px;
+}
+
+a.toindex {
+	cursor: pointer;
+	text-decoration: underline;
+	font-family: Arial, serif;
+	font-size: 14px;
+	color: #666666;
+}
+
+.ui-state-focus {
+	/* Remove focus outline in accordion. */
+	outline: none;
+}
+	
+.ui-accordion-header {
+	padding-left: 40px;
+	background: 0.8em url('../images/icon-chapter-closed.png') no-repeat;
+}
+
+.ui-accordion-header.ui-accordion-header-active {
+	background: 0.8em url('../images/icon-chapter-open.png') no-repeat;
+}
