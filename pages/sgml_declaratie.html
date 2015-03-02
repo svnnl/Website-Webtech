@@ -1,18 +1,268 @@
 <h2> SGML Declaratie </h2>
 
 <p>
-De SGML declaratie beschrijft algemene informatie over de taal, zoals welke charset er gebruikt wordt, maar ook andere regels over de syntaxis die later in de Document Type Definition niet kunnen worden beschreven.
+    De SGML declaratie beschrijft algemene informatie over de taal, zoals welke charset er gebruikt wordt, maar ook andere regels over de syntaxis die later in de Document Type Definition niet kunnen worden beschreven.
 </p>
 <p>
-Als voorbeeld nemen we de SGML-declaratie van HTML 4.0:
+    Als voorbeeld nemen we de SGML-declaratie van HTML 4.0:
+</p>
+<p class="code">
+&lt;!SGML&nbsp;&nbsp;"ISO&nbsp;8879:1986"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;--<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SGML&nbsp;Declaration&nbsp;for&nbsp;HyperText&nbsp;Markup&nbsp;Language&nbsp;version&nbsp;4.0<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;With&nbsp;support&nbsp;for&nbsp;Unicode&nbsp;UCS-4&nbsp;and&nbsp;increased&nbsp;limits<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;tag&nbsp;and&nbsp;literal&nbsp;lengths&nbsp;etc.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;--<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;CHARSET<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BASESET&nbsp;&nbsp;"ISO&nbsp;Registration&nbsp;Number&nbsp;177//CHARSET<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ISO/IEC&nbsp;10646-1:1993&nbsp;UCS-4&nbsp;with<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;implementation&nbsp;level&nbsp;3//ESC&nbsp;2/5&nbsp;2/15&nbsp;4/6"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DESCSET&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UNUSED<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UNUSED<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;13&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;13<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;14&nbsp;&nbsp;18&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UNUSED<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;32&nbsp;&nbsp;95&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;32<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;127&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UNUSED<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;128&nbsp;32&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UNUSED<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;160&nbsp;2147483486&nbsp;160<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;CAPACITY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SGMLREF<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TOTALCAP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;150000<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GRPCAP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;150000<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ENTCAP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;150000<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;SCOPE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DOCUMENT<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;SYNTAX<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SHUNCHAR&nbsp;CONTROLS&nbsp;0&nbsp;1&nbsp;2&nbsp;3&nbsp;4&nbsp;5&nbsp;6&nbsp;7&nbsp;8&nbsp;9&nbsp;10&nbsp;11&nbsp;12&nbsp;13&nbsp;14&nbsp;15&nbsp;16<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;17&nbsp;18&nbsp;19&nbsp;20&nbsp;21&nbsp;22&nbsp;23&nbsp;24&nbsp;25&nbsp;26&nbsp;27&nbsp;28&nbsp;29&nbsp;30&nbsp;31&nbsp;127<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BASESET&nbsp;&nbsp;"ISO&nbsp;646IRV:1991//CHARSET<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;International&nbsp;Reference&nbsp;Version<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(IRV)//ESC&nbsp;2/8&nbsp;4/2"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DESCSET&nbsp;&nbsp;0&nbsp;128&nbsp;0<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FUNCTION<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;13<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SPACE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;32<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TAB&nbsp;SEPCHAR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NAMING&nbsp;&nbsp;&nbsp;&nbsp;LCNMSTRT&nbsp;""<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UCNMSTRT&nbsp;""<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LCNMCHAR&nbsp;".-"&nbsp;&nbsp;--&nbsp;?include&nbsp;"~/_"&nbsp;for&nbsp;URLs?&nbsp;--<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UCNMCHAR&nbsp;".-"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NAMECASE&nbsp;GENERAL&nbsp;YES<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ENTITY&nbsp;&nbsp;NO<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DELIM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GENERAL&nbsp;&nbsp;SGMLREF<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SHORTREF&nbsp;SGMLREF<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NAMES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SGMLREF<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;QUANTITY&nbsp;&nbsp;SGMLREF<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ATTSPLEN&nbsp;65536&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;These&nbsp;are&nbsp;the&nbsp;largest&nbsp;values&nbsp;--<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LITLEN&nbsp;&nbsp;&nbsp;&nbsp;65536&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;permitted&nbsp;in&nbsp;the&nbsp;declaration&nbsp;--<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NAMELEN&nbsp;&nbsp;65536&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;Avoid&nbsp;fixed&nbsp;limits&nbsp;in&nbsp;actual&nbsp;--<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PILEN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;65536&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;implementations&nbsp;of&nbsp;HTML&nbsp;UA's&nbsp;--<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TAGLVL&nbsp;&nbsp;&nbsp;&nbsp;100<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TAGLEN&nbsp;&nbsp;&nbsp;&nbsp;65536<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GRPGTCNT&nbsp;150<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GRPCNT&nbsp;&nbsp;&nbsp;&nbsp;64<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;FEATURES<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MINIMIZE<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DATATAG&nbsp;&nbsp;NO<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OMITTAG&nbsp;&nbsp;YES<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RANK&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NO<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SHORTTAG&nbsp;YES<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LINK<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SIMPLE&nbsp;&nbsp;&nbsp;&nbsp;NO<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IMPLICIT&nbsp;NO<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EXPLICIT&nbsp;NO<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OTHER<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CONCUR&nbsp;&nbsp;&nbsp;&nbsp;NO<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SUBDOC&nbsp;&nbsp;&nbsp;&nbsp;NO<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FORMAL&nbsp;&nbsp;&nbsp;&nbsp;YES<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;<br/>
+</p>
+<p>
+Een SGML-document is opgebouwd uit entiteiten. De SGML-declaratie zit in de eerste entiteit die wordt omgeven door '<span class="code">&lt;&#33;SGML</span>' en "<span class="code">&gt;</span>". Binnen in de entiteit worden een aantal definities gegeven die gelden voor het gehele document.
 </p>
 
-<h3 id="charset_clausule"> CHARSET clausule </h3>
+<h3 id="charset_clausule">CHARSET clausule</h3>
+<p>
+	Eerst wordt de CHARSET gedefinieerd, die is onderverdeeld in de BASESET en de DESCSET.
+</p>
+<p>
+	De BASESET is de charset die als referentie wordt gebruikt voor de DESCSET die later wordt gegeven. De basis van het standaard document hierboven is "<span class="code">ISO 646:1983//CHARSET International Reference Version (IRV)//ESC 2/5 4/0</span>".
+</p>
+<p>
+	De DESCSET geeft de schrijver van het document de mogelijkheid om bepaalde karakters te vervangen door andere karakters die voorkomen in de BASESET.
+</p>
+<p>
+	Sinds de komst van Unicode en verwanten is deze functionaliteit niet meer strict noodzakelijk. Echter, in de tijd dat SGML werd opgesteld was het wel wenselijk, er was in die tijd namelijk geen standaard waarmee meer karakters konden worden getoond dan de karakters aanwezig in de charset die werd gebruikt om het document te lezen.
+</p>
+<p>
+	Elke lijn na DESCSET definieert een enkele wijziging. Het eerste getal is gelijk aan de byte-code van het karakter dat moet worden vervangen (uit de charset die wordt gebruikt om het document te lezen). Het getal daarna geeft aan hoeveel van de daaropvolgende karakters ook moeten worden vervangen. Het laatste getal geeft aan welk karakter (welke byte-code) uit de BASESET moet worden gebruikt om de karakter(s) te vervangen.
+</p>
 
+<h3 id="capacity_clausule">CAPACITY clausule</h3>
+<p>
+	Met behulp van CAPACITY kan een indicatie worden gegeven van hoeveel geheugen het parsen van het betreffende SGML-document gaat kosten. De lezende computer krijgt dan de gelegenheid om dat geheugen van te voren vrij te maken en niet tijdens het <em>parsen</em> op een tekort te stuiten. Vooral voor oudere systemen kan dat tot betere prestaties leiden. In het bovenstaande voorbeeld wordt als waarde PUBLIC gegeven, waarmee wordt aangegeven dat de definities in een ander bijgevoegd bestand staan.
+</p>
+<p>
+	De waardes kunnen ook <em>inline</em> in het bestand worden ingevoegd, enkele voorbeelden van definities die gegeven kunnen worden zijn: TOTALCAP, ELEMCAP, ATTCAP: respectievelijk kunnen hiermee indicaties worden gegeven van het nodige geheugen in bytes voor het totale <em>parse</em>-proces, het <em>parse</em>-proces van de elements en het <em>parse</em>-proces van de attributes.
+</p>
 
+<h3 id="scope_clausule">SCOPE clausule</h3>
+<p>
+	In het standaard voorbeeld wordt SCOPE in combinatie met de waarde DOCUMENT gebruikt om aan te geven dat de DESCSET van toepassing is op het gehele document. Wanneer de DESCSET alleen gebruikt dient te worden voor de body van het document kan hier als waarde INSTANCE worden gegeven.
+</p>
 
+<h3 id="syntax_clausule">SYNTAX clausule</h3>
+<p>
+	In de SYNTAX clausule worden regels gegeven voor de syntax in het document, die wordt opgedeeld in 8 subclausules:
+</p>
+<ol type="1">
+	<li>
+		<p>
+			In de SHUNCHAR clausule worden de byte-codes aangeduid van karakters die kunnen worden overgeslagen bij het <em>parsen</em>.
+		</p>
+	</li>
+	<li>
+		<p>
+			Opnieuw een BASESET, waarbij hetzelfde geldt als bij de voorgaande, deze geldt echter alleen voor de SYNTAX clausule.
+		</p>
+	</li>
+	<li>
+		<p>
+			Bijbehorende DESCSET, geldt ook alleen voor de SYNTAX clausule.
+		</p>
+	</li>
+	<li>
+		<p>
+			In de FUNCTION clausule kunnen functies worden toegewezen aan bepaalde karakters.
+		</p>
+		<p>
+			Doorgaans worden eerst de drie standaardfuncties RE, RS en SPACE gedefinieerd. RE staat voor Record End en het gekoppelde karakters is meestal de Carriage Return, wanneer het gegeven karakter wordt gevonden door de parser weet die dat een record wordt gesloten. RS wordt meestal op Line Feed gezet en geeft het openen van een record. De functies worden beschreven in de vorm <span class="code"><naam standaardfunctie&gt;&nbsp;&nbsp;<karakter byte-code&gt;</span>.
+		</p>
+		<p>
+			Daarbij kunnen ook nog eigen functies worden toegevoegd. De syntax hiervoor is: <span class="code">&nbsp;&lt;naam&nbsp;functie&gt;&nbsp;&nbsp;&lt;functieklasse&gt;&nbsp;&nbsp;&lt;karakter&nbsp;byte-code&gt;</span>. De volgende functieklasses kunnen worden toegewezen:
+		</p>
+		<ul>
+			<li>FUNCHAR: Voor karakters die een speciale betekenis hebben, maar niet binnen de SGML context.</li>
+			<li>MSOCHAR: Karakter dat het bereik van de <em>parser</em> verkleint, en er daardoor voor zorgt dat een set specifiekere markup-regels op het document worden toegepast.</li>
+			<li>MSICHAR: Tegenhanger van MSOCHAR, geeft aan dat de <em>parser</em> zijn oude markup-regels weer moet gaan gebruiken</li>
+			<li>MSSCHAR: Doet hetzelfde als MSOCHAR, maar alleen voor het daaropvolgende karakter.</li>
+			<li>SEPCHAR: Maakt het gebonden karakter een <em>seperator</em>, net als RE, RS en SPACE.</li>
+		</ul>
+	</li>
+	<li>
+		<p>
+			In de NAMING clausule van de SYNTAX clausule worden regels opgesteld die moeten worden gehandhaafd in namen (van entiteiten, attributen, etc.) binnen het SGML-document.
+		</p>
+		<p>
+			De syntax voor en regel is als volgt: <span class="code">&lt;regel&gt;&nbsp;&nbsp;&lt;karakters&nbsp;1&gt;&nbsp;&nbsp;&lt;k2&nbsp;…&gt;</span>.
+		</p>
+		<p>
+			Vijf soorten regels dienen opgesteld te worden:
+		</p>
+		<ul>
+			<li>LCNMSTRT: Deze karakters (alleen <em>lowercase</em>) kunnen worden gebruikt bij het beginnen van een naam, standaard zit hier het hele alfabet bij.</li>
+			<li>UCNMSTRT: Hetzelfde als LCNMSTRT, alleen dan voor <em>uppercase</em> karakters.</li>
+			<li>LCNMCHAR: <em>Lowercase</em> karakters die gebruikt kunnen worden in de gehele naam behalve het eerste karakters.</li>
+			<li>UCNMCHAR: Hetzeflde als LCNMCHAR, alleen dan voor <em>uppercase</em> karakters.</li>
+			<li>NAMECASE: Hiermee kan de strictheid van de parser worden bepaald met betrekking tot kleine en grote letters. Twee variabelen kunnen worden toegewezen met ofwel NO, ofwel YES. GENERAL is de eerste, wanneer deze aan staat wordt er over het geheel geen onderscheid tussen klein en groot gemaakt. ENTITY doet hetzelfde, maar dan alleen voor karakters in entiteiten.
+		</ul>
+	</li>
+	<li>
+		<p>
+			De DELIM clausule is onderverdeeld in twee sub-clausules: GENERAL en SHORTREF. In GENERAL kunnen standaard delimiters uit SGML worden overschreven volgens de syntax <span class="code">&lt;delimiter naam&gt;&nbsp;&nbsp;&lt;delimiter karakter&gt;</span>. De verschillende delimiters kunnen in de SGML specificatie worden teruggevonden. In SHORTREF kunnen extra referenties gemaakt worden tussen bepaalde string-waardes en entiteiten.
+		</p>
+	</li>
+	<li>
+		<p>
+			In de NAMES sub-clausule kunnen bepaalde namen worden overschreven door gereserveerde namen van de SGML-taal. Dit gebeurt met de volgende syntax: <span class="code">&lt;naam om te vervangen&gt;&nbsp;&nbsp;&lt;gereserveerde naam&gt;</span>. Het is verplicht om te beginnen met SGMLREF, om de standaard namen te importeren.
+		</p>
+	</li>
+	<li>
+		<p>
+			In de QUANTITY sub-clausule kunnen limieten worden gesteld voor de beschreven syntax. Voorbeelden van limieten zijn ATTCNT en NAMELEN. De daaraan verbonden waardes stellen respectievelijk limieten op de lengte van een attribuut en de lengte van een naam.
+		</p>
+	</li>
+</ol>
 
+<h3 id="features_clausule">FEATURES clausule</h3>
+<p>
+	In de clausule kunnen bepaalde eigenschappen van het <em>parsen</em> worden aangestuurd. Deze parameters heten <em>features</em> en worden opgedeeld in drie sub-clausules, ofwel categorieen: MINIMIZE, LINK en OTHER. De catagorie MINIMIZE behelst <em>features</em> die toestaan dat bepaalde onderdelen van de syntaxis mogen worden weggelaten, zodat de code beknopt blijft. De LINK catagorie gaat over <em>features</em> die helpen bij het linken van attributen naar bepaalde elementen en de overige <em>features</em> zitten in de catagorie OTHER.
+</p>
+<p>
+	Een feature kan binnen zijn sub-clausule worden aan- of uitgezet met de volgende syntax: <span class="code">&ltfeature naam&gt;&nbsp;&nbsp;[YES/NO]</span>.
+</p>
+<p>
+	Hieronder zijn de <em>features</em> tabelvorm te vinden:
+</p>
+<table>
+	<tr>
+		<td><strong>Feature naam</strong></td>
+		<td><strong>Catagorie</strong></td>
+		<td><strong>Effect van aanzetten</strong></td>
+	</tr>
+	<tr>
+		<td>DATATAG</td>
+		<td>MINIMIZE</td>
+		<td>De DTD heeft toestemming om data in een element nu ook impliciet te lezen als eindtag. (Tevens blijven de desbetreffende bytes data.)</td>
+	</tr>
+	<tr>
+		<td>OMITTAG</td>
+		<td>MINIMIZE</td>
+		<td>Hiermee wordt toegestaan dat de DTD regels opstelt waarbij sommige start- of eindtags mogen worden weggelaten.</td>
+	</tr>
+	<tr>
+		<td>RANK</td>
+		<td>MINIMIZE</td>
+		<td>Identifiers mogen door de DTD nu worden opgesplitst in een stem en een suffix. Hierdoor kan een boomhierarchie worden aangelegd in het document.</td>
+	</tr>
+	<tr>
+		<td>SHORTTAG</td>
+		<td>MINIMIZE</td>
+		<td>De DTD mag bepaalde tags nu afkorten.</td>
+	</tr>
+	<tr>
+		<td>SIMPLE</td>
+		<td>LINK</td>
+		<td>Simpele vorm van linken waarbij attributen kunnen worden gekoppeld aan entiteiten in de DTD.</td>
+	</tr>
+	<tr>
+		<td>IMPLICIT</td>
+		<td>LINK</td>
+		<td>Impliciet linken is toegestaan, waarbij de betekenis van de link in de DTD moet worden geinterpreteerd door de parser zelf.</td>
+	</tr>
+	<tr>
+		<td>EXPLICIT</td>
+		<td>LINK</td>
+		<td>Bij expliciet linken moeten links in de DTD verwijzen naar een andere SGML-document.</td>
+	</tr>
+	<tr>
+		<td>CONCUR</td>
+		<td>OTHER</td>
+		<td>Meerdere DTD's mogen worden gebruikt in één SGML-document.</td>
+	</tr>
+	<tr>
+		<td>SUBDOC</td>
+		<td>OTHER</td>
+		<td>Entiteiten mogen worden beschreven als complete alleenstaande SGML-documenten. Wanneer als waarde YES is opgegeven, mag daarachter ook nog een getal worden opgegeven die aangeeft hoe diep de boom van SGML-documenten maximaal mag zijn.</td>
+	</tr>
+	<tr>
+		<td>FORMAL</td>
+		<td>OTHER</td>
+		<td>Entieiten met de PUBLIC identifier moeten nu voldoen aan de regels die hierbij zijn opgesteld, waardoor de parser stricter wordt</td>
+	<tr/>
+</table>
+
+<h3 id="sgmlref_keyword">SGMLREF keyword</h3>
+<p>
+	Bij een groot aantal clausules of sub-clausules kan het keyword SGMLREF worden gebruikt om aan te geven dat de bijbehorende definitie zich in een apart 'standaard' SGML-bestand bevindt. Het is dan nog steeds mogelijk om waardes toe te voegen aan de desbetreffende clausule, die worden dan overschreven. In essentie worden hiermee alle standaard waardes van SGML eerst geimporteerd en hoeven daarna alleen nog maar de nodige wijzigingen worden gemaakt. Vaak worden in de SGML declaratie echter bij bijna elke clausule SGMLREF's gebruikt, zo wordt de standaard SGML-syntaxis aangehouden.
+</p>
 
 <div id="sources">
-	<ol type="1"></ol>
+    <ol type="1"></ol>
 </div>

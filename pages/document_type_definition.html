@@ -1,0 +1,168 @@
+<h2>Document Type Definition</h2>
+
+<p>
+	Het tweede onderdeel van een SGML-document is de Document Type Definition, hierin wordt de syntax van de gebruikte markup-taal in het SGML-document beschreven.
+</p>
+<p>
+	De DTD is een schema-technologie die gebruikt wordt in SGML en daarbij ook in de subsets van SGML, als HTML en XML. Een DTD wordt voornamelijk gebruikt zodat een groep met personen een standaard DTD kan gebruiken of vaststellen voor het uitwisselen van data. Een bepaalde applicatie kan een DTD gebruiken om vast te stellen of bepaalde data die je binnen krijgt geldig is.
+</p>
+<p>
+	DTD is te vergelijken met het later ontwikkelde XML-schema. DTD is dan ook wat cryptischer dan het XML-schema, maar aangezien DTD al lang gebruikt wordt en ook veel XML-specificaties gebaseerd zijn op DTD, blijft het erg relevant en zal het niet snel totaal vervangen worden.
+</p>
+<p>
+	Een DTD bestaat grof weg uit 5 "bouwstenen":
+</p>
+<ol type="1">
+	<li>Elementen</li>
+	<li>Attributen</li>
+	<li>Entiteiten</li>
+	<li>PCDATA</li>
+	<li>CDATA</li>
+</ol>
+
+<h3 id="cpdata_en_cdata">CPDATA en CDATA</h3>
+<p>
+	In het uiteindelijke document zal informatie worden omsloten door elementen. De content van die elementen kunnen in twee categorieen vallen:
+</p>
+<ul>
+	<li>PCDATA</li>
+	<li>CDATA</li>
+</ul>
+<p>
+Het verschil tussen deze twee kan worden geextraheerd uit de betekenis. PCDATA staat voor <em>Parsed Character Data</em> en CDATA staat voor <em>Character Data</em>. De laatste van de twee is dus een rij karakters die niet <em>geparsed</em> zal worden. Wanneer een bepaald element dus CDATA in zich heeft, kan dat element geen sub-elementen meer hebben, de content wordt immers niet <em>geparsed</em>. Het is dus voor de meeste elementen wenselijk dat ze PCDATA in zich hebben.
+</p>
+
+<h3 id="elementen">Elementen</h3>
+<p>
+	Elementen moeten worden gedefineerd om de opbouw van het document te verduidelijken. In HTML zijn elementen makkelijk te herkennen, in de HTML-code: <span class="code">&lt;br /&gt;</span> is "<em>br</em>" het element.
+</p>
+<p>
+	Elementen definieren in een DTD gebeurt met de volgende syntax:<br/>
+	<span class="code">&lt;!ELEMENT <em>name</em> <em>catagory</em>&gt;</span><br/>
+	of<br/>
+	<span class="code">&lt;!ELEMENT <em>name</em> (<em>content</em>)&gt;</span>
+</p>
+<p>
+	Elementen zonder content, zoals het hiervoor beschreven "<em>br</em>"-element, vallen onder de catagorie EMPTY. De DTD-code benodigd om het "<em>br</em>"-element te beschrijven is dus als volgt:
+	<br/><span class="code">&lt;!ELEMENT br EMPTY&gt;</span>
+</p>
+<p>
+	Verder kan een element content hebben, onder andere is het mogelijk om te kiezen ofwel een element PCDATA in zich dient te hebben, ofwel CDATA ofwel een combinatie van de twee. Voor PCDATA kan de volgende code worden gebruikt:
+	<br/><span class="code">&lt;!ELEMENT foo (#PCDATA)&gt;</span> en voor CDATA: <span class="code">&lt;!ELEMENT bar (#CDATA)&gt;</span>
+</p>
+<p>
+	Om voor beide in aanmerking te komen dient het element aan de catagorie ANY worden toegevoegd: <span class="code">&lt;!ELEMENT foobar ANY&gt;</span>
+</p>
+<p>
+	Om sub-elementen aan elementen toe te voegen is een geheel andere syntax nodig. Sub-elementen toestaan binnen een bepaald element kan op de volgende manier:
+	<br/><span class="code">&lt;!ELEMENT parent (child1,child2)&gt;</span>
+</p>
+<p>
+	Echter, zolang we <em>child1</em> schrijven, moet dat element op die plek minimaal eens en maximaal eens voorkomen. We kunnen dit anders doen door een van de volgende methoden te gebruiken:
+</p>
+<ul>
+	<li>1 of meer toestaan: <span class="code">&lt;!ELEMENT parent (child+)&gt;</span></li>
+	<li>0 of meer toestaan: <span class="code">&lt;!ELEMENT parent (child*)&gt;</span></li>
+	<li>0 of 1 toestaan: <span class="code">&lt;!ELEMENT parent (child?)&gt;</span></li>
+</ul>
+<p>
+	Nog een beperking is echter aanwezig bij de komma-syntax: de volgorde van de sub-elementen moet hetzelfde blijven. Dus <em>child1</em> mag niet voor <em>child2</em> komen in het <em>parent</em>-element.
+</p>
+<p>
+	We kunnen ook aangeven dat ofwel het ene, ofwel het andere sub-element moet bestaan, met de volgende code:
+	<br/><span class="code">&lt;!ELEMENT parent (child1|child2)&gt;<span>
+</p>
+<p>
+	Wanneer we meer willen doen dan elementen in element stoppen, moeten we met PCDATA gaan werken, een zinvol element zou er bijvoorbeeld zo uit kunnen zien:
+	<br/><span class="code">&lt;!ELEMENT sms (#PCDATA|(sender, receiver+)|text)&gt;</span>
+</p>
+<p>
+	Het element "<em>sms</em>" heeft drie subelementen. <em>sender</em> en <em>receiver</em> moeten achter elkaar staan, ergens in het geheel van dit element. Dat kan dus aan het einde, in het midden, of aan het begin, zolang ze maar achter elkaar voorkomen. <em>sender</em> moet daarbij een keer voorkomen, <em>receiver</em> mag echter meerdere keren achter elkaar worden geschreven. Het <em>text</em> sub-element kan ook overal staan en mag maar 1 keer voorkomen. Tot slot is het ook mogelijk om <em>parsed</em> data los in het element in te voegen.
+</p>
+
+<h3 id="attributen">Attributen</h3>
+<p>
+	De taal kan verder worden uitgebreid met attributen. In HTML is "<em>href</em>" bijvoorbeeld een attribuut: <span class="code">&lt;a href="example.com"&gt;&lt;/a&gt;</span>. Hier is het <em>href</em>-attribuut toegeschreven aan het <em>a</em>-element. De waarde van het attribuut is in dit geval "example.com".
+</p>
+<p>
+	Attributen definieren in de DTD gebeurt met de volgende syntax:
+	<br/><span class="code">&lt;!ATTLIST <em>element-name</em> <em>name</em> <em>type</em> <em>value</em></span>
+</p>
+<p>
+	<em>element-name</em> verwijst naar het element - die ook gedefinieerd dient te zijn in de DTD - waar het attribuut in gebruikt mag worden.
+</p>
+<p>
+	<em>name</em> verwijst naar de naam van het attribuut, in het geval van het "<em>href</em>" attribuut zou het begin van de syntax er dus zo uit zien:
+	<br/><span class="code">&lt;!ATTLIST a href ...&gt;</span>
+</p>
+<p>
+	De derde parameter is <em>type</em> en zeg iets over de waarde van het attribuut. Een aantal van de meest gebruikte opties voor type zijn:
+</p>
+<ul>
+	<li><span class="code">CDATA</span>: Het attribuut bevat normale data, die niet verder <em>geparsed</em> hoeft te worden. Deze wordt in de praktijk bijna altijd gebruikt.</li>
+	<li><span class="code">ID</span>: De waarde is een unieke ID-waarde.</li>
+	<li><span class="code">IDREF</span>: De waarde is een verwijzing naar het ID van een attribuut van een ander element.</li>
+	<li><span class="code">IDREFS</span>: Een lijst van IDREF's.</li>
+	<li><span class="code">ENTITY</span>: De waarde is een entiteit.</li>
+	<li><span class="code">ENTITIES</span>: De waarde is een lijst van entiteiten.
+	<li>
+		<p>
+			Lijst van mogelijkheden: hiermee kan de waarde van het attribuut beperkt worden tot een lijst van mogelijkheden. Bijvoorbeeld:
+			<br/><span class="code">&lt;!ATTLIST sms state (received|sent|draft) ...&gt;</span>
+		</p>
+		<p>
+			Hiermee is het mogelijk om ons sms-element een "<em>state</em>" te geven. Zodat we bij kunnen houden of het smsje al verzonden is of juist ontvangen. In onze gedefinieerde taal zou een ontvangen sms er zo uit kunnen zien:
+			<br/><span class="code">&lt;sms state="received"&gt;...&lt;/sms&gt;</span>
+		</p>
+		<p>
+			De waarde van <em>state</em> mag geen andere waardes dan die uit de lijst hebben.
+		</p>
+	</li>
+</ul>
+<p>
+<p>
+De laatste parameter van de syntax voor attributen is <em>value</em> en kan de volgende waardes hebben:
+</p>
+<ul>
+	<li><span class="code">#REQUIRED</span>: Dit betekent dat het attribuut verplicht in het bijbehorende element moet zijn opgegeven.</li>
+	<li><span class="code">#IMPLIED</span>: Wanneer het attribuut niet verplicht is en ook geen standaard waarde.</li>
+	<li>
+		<span class="code">#FIXED "<em>value</em>"</span>: Wanneer een attribuut verplicht aanwezig moet zijn en daarbij de opgegeven waarde vooraf al is bepaald.</li.
+		<p>
+			De volgende regel: <span class="code">&lt;!ATTLIST foo bar CDATA #FIXED "thisisrequired"&gt;</span> verbiedt dus deze regel in het bijgevoegde document: <span class="code">&lt;foo bar="myvalue" /&gt;</span>. De regel moet zijn: <span class="code">&lt;foo bar="thisisrequired" /&gt;</span>.
+		</p>
+	</li>
+	<li>
+		<span class="code">"<em>value</em>"</span>: Een standaard-waarde die geldt wanneer het attribuut niet aanwezig is in het bijbehorende element. Als die wel aanwezig is, geldt de opgegeven waarde.
+		<p>
+			Stel de volgende DTD-regel: <span class="code">&lt;!ATTLIST foo bar CDATA "default"&gt;</span> en een regel uit de code van het document: <span class="code">&lt;foo /&gt;</span>. De waarde van <em>bar</em> is niet opgegeven en neemt dus de standaard-waarde "<em>default</em>" aan.
+		</p>
+	</li>
+</ul>
+
+<h3 id="entiteiten">Entiteiten</h3>
+<p>
+	Entiteiten bieden de mogelijkheid om bepaalde strings snel om te zetten naar vooraf bepaalde waardes. In HTML wordt dit onder andere gebruikt voor Unicode-karakters. Zoals in het volgende stukje HTML: <span class="code">&lt;p&gt;Foo&amp;lt;Bar&lt;/p&gt;</span>.
+</p>
+<p>
+	Het entiteit in het bovenstaande stukje is "<em>&amp;lt;</em>". Deze entiteit is binnen de DTD van HTML simpelweg gedefinieerd als een "minder dan"-teken (less than sign). Na het parsen wordt dit op het scherm laten zien als "Foo&lt;Bar".
+</p>
+<p>
+	Het definieren van een entiteit binnen de DTD gaat als volgt:
+	<br/><span class="code">&lt;!ENTITY name "value"&gt;</span>
+</p>
+<p>
+	Om bijvoorbeeld een entiteit te maken waarmee we snel de huidige versie van HTML kunnen laten zien schrijven we het volgende:
+	<br/><span class="code">&lt;!ENTITY version "HTML 4.0 Transitional"&gt;</span>
+</p>
+<p>
+	Nu kan een site de volgende paragraaf renderen:
+	&lt;p&gt;&amp;version;&lt;/p&gt;
+</p>
+<p>
+	Uiteindelijk komt er dan - mits het HTML-document in zijn DTD de version entiteit goed heeft gedefineerd - "<em>HTML 4.0 Transitional</em>" op het scherm te staan.
+</p>
+
+<div id="sources">
+    <ol type="1"></ol>
+</div>
