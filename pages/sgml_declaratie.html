@@ -1,7 +1,8 @@
 <h2> SGML Declaratie </h2>
 
 <p>
-    De SGML declaratie beschrijft algemene informatie over de taal, zoals welke charset er gebruikt wordt, maar ook andere regels over de syntaxis die later in de Document Type Definition niet kunnen worden beschreven.
+    De SGML declaratie beschrijft algemene informatie over de taal die in de <em>body</em> gebruikt zal worden, zoals welke charset er gebruikt wordt, maar ook andere regels over de syntaxis die later in de Document Type Definition niet kunnen worden beschreven.
+	(<a href="http://www.w3.org/TR/WD-html40-970708/intro/sgmltut.html" title="W3C. A brief SGML tutorial">W3C</a>)
 </p>
 <p>
     Als voorbeeld nemen we de SGML-declaratie van HTML 4.0:
@@ -84,12 +85,13 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&gt;<br/>
 </p>
 <p>
-Een SGML-document is opgebouwd uit entiteiten. De SGML-declaratie zit in de eerste entiteit die wordt omgeven door '<span class="code">&lt;&#33;SGML</span>' en "<span class="code">&gt;</span>". Binnen in de entiteit worden een aantal definities gegeven die gelden voor het gehele document.
+Een SGML-document is opgebouwd uit entiteiten. De SGML-declaratie zit in de eerste entiteit die wordt omgeven door "<span class="code">&lt;&#33;SGML</span>" en "<span class="code">&gt;</span>". Binnen in de entiteit worden een aantal definities gegeven die gelden voor het gehele document.
 </p>
 
 <h3 id="charset_clausule">CHARSET clausule</h3>
 <p>
 	Eerst wordt de CHARSET gedefinieerd, die is onderverdeeld in de BASESET en de DESCSET.
+	(<a href="http://xml.coverpages.org/wlw13.html" title="W. L. Wholer. Document Character Sets">Wholer</a>)
 </p>
 <p>
 	De BASESET is de charset die als referentie wordt gebruikt voor de DESCSET die later wordt gegeven. De basis van het standaard document hierboven is "<span class="code">ISO 646:1983//CHARSET International Reference Version (IRV)//ESC 2/5 4/0</span>".
@@ -106,10 +108,10 @@ Een SGML-document is opgebouwd uit entiteiten. De SGML-declaratie zit in de eers
 
 <h3 id="capacity_clausule">CAPACITY clausule</h3>
 <p>
-	Met behulp van CAPACITY kan een indicatie worden gegeven van hoeveel geheugen het parsen van het betreffende SGML-document gaat kosten. De lezende computer krijgt dan de gelegenheid om dat geheugen van te voren vrij te maken en niet tijdens het <em>parsen</em> op een tekort te stuiten. Vooral voor oudere systemen kan dat tot betere prestaties leiden. In het bovenstaande voorbeeld wordt als waarde PUBLIC gegeven, waarmee wordt aangegeven dat de definities in een ander bijgevoegd bestand staan.
+	Met behulp van CAPACITY kan een indicatie worden gegeven van hoeveel geheugen het parsen van het betreffende SGML-document gaat kosten. De lezende computer krijgt dan de gelegenheid om dat geheugen van te voren vrij te maken. Zodat het niet tijdens het <em>parsen</em> op een tekort stuit. Vooral voor oudere systemen kan dat tot betere prestaties leiden. In het bovenstaande voorbeeld wordt als waarde PUBLIC gegeven, waarmee wordt aangegeven dat de definities in een ander bijgevoegd bestand staan.
 </p>
 <p>
-	De waardes kunnen ook <em>inline</em> in het bestand worden ingevoegd, enkele voorbeelden van definities die gegeven kunnen worden zijn: TOTALCAP, ELEMCAP, ATTCAP: respectievelijk kunnen hiermee indicaties worden gegeven van het nodige geheugen in bytes voor het totale <em>parse</em>-proces, het <em>parse</em>-proces van de elements en het <em>parse</em>-proces van de attributes.
+	De waardes kunnen ook <em>inline</em> in het bestand worden ingevoegd, enkele voorbeelden van definities die gegeven kunnen worden zijn: TOTALCAP, ELEMCAP, ATTCAP: respectievelijk kunnen hiermee indicaties worden gegeven van het nodige geheugen in bytes voor het totale <em>parse</em>-proces, het <em>parse</em>-proces van de elementen en het <em>parse</em>-proces van de attributen.
 </p>
 
 <h3 id="scope_clausule">SCOPE clausule</h3>
@@ -120,6 +122,7 @@ Een SGML-document is opgebouwd uit entiteiten. De SGML-declaratie zit in de eers
 <h3 id="syntax_clausule">SYNTAX clausule</h3>
 <p>
 	In de SYNTAX clausule worden regels gegeven voor de syntax in het document, die wordt opgedeeld in 8 subclausules:
+	(<a href="http://www.is-thought.co.uk/book/sgml-4.htm" title="Bryan M., 1997. Comparison of SGML and XML">Bryan, 1997.</a>)
 </p>
 <ol type="1">
 	<li>
@@ -142,7 +145,7 @@ Een SGML-document is opgebouwd uit entiteiten. De SGML-declaratie zit in de eers
 			In de FUNCTION clausule kunnen functies worden toegewezen aan bepaalde karakters.
 		</p>
 		<p>
-			Doorgaans worden eerst de drie standaardfuncties RE, RS en SPACE gedefinieerd. RE staat voor Record End en het gekoppelde karakters is meestal de Carriage Return, wanneer het gegeven karakter wordt gevonden door de parser weet die dat een record wordt gesloten. RS wordt meestal op Line Feed gezet en geeft het openen van een record. De functies worden beschreven in de vorm <span class="code"><naam standaardfunctie&gt;&nbsp;&nbsp;<karakter byte-code&gt;</span>.
+			Doorgaans worden eerst de drie standaardfuncties RE, RS en SPACE gedefinieerd. RE staat voor Record End en het gekoppelde karakter is meestal de Carriage Return, wanneer het gegeven karakter wordt gevonden door de <em>parser</em> weet die dat een record wordt gesloten. RS wordt meestal op Line Feed gezet en geeft het openen van een record aan. De functies worden beschreven in de vorm <span class="code">&lt;naam standaardfunctie&gt;&nbsp;&nbsp;&lt;karakter byte-code&gt;</span>.
 		</p>
 		<p>
 			Daarbij kunnen ook nog eigen functies worden toegevoegd. De syntax hiervoor is: <span class="code">&nbsp;&lt;naam&nbsp;functie&gt;&nbsp;&nbsp;&lt;functieklasse&gt;&nbsp;&nbsp;&lt;karakter&nbsp;byte-code&gt;</span>. De volgende functieklasses kunnen worden toegewezen:
@@ -160,7 +163,7 @@ Een SGML-document is opgebouwd uit entiteiten. De SGML-declaratie zit in de eers
 			In de NAMING clausule van de SYNTAX clausule worden regels opgesteld die moeten worden gehandhaafd in namen (van entiteiten, attributen, etc.) binnen het SGML-document.
 		</p>
 		<p>
-			De syntax voor en regel is als volgt: <span class="code">&lt;regel&gt;&nbsp;&nbsp;&lt;karakters&nbsp;1&gt;&nbsp;&nbsp;&lt;k2&nbsp;…&gt;</span>.
+			De syntax voor en regel is als volgt: <span class="code">&lt;regel&gt;&nbsp;&nbsp;&lt;karakter&nbsp;1&gt;&nbsp;&nbsp;&lt;k2&nbsp;…&gt;</span>.
 		</p>
 		<p>
 			Vijf soorten regels dienen opgesteld te worden:
@@ -168,7 +171,7 @@ Een SGML-document is opgebouwd uit entiteiten. De SGML-declaratie zit in de eers
 		<ul>
 			<li>LCNMSTRT: Deze karakters (alleen <em>lowercase</em>) kunnen worden gebruikt bij het beginnen van een naam, standaard zit hier het hele alfabet bij.</li>
 			<li>UCNMSTRT: Hetzelfde als LCNMSTRT, alleen dan voor <em>uppercase</em> karakters.</li>
-			<li>LCNMCHAR: <em>Lowercase</em> karakters die gebruikt kunnen worden in de gehele naam behalve het eerste karakters.</li>
+			<li>LCNMCHAR: <em>Lowercase</em> karakters die gebruikt kunnen worden in de gehele naam behalve het eerste karakter.</li>
 			<li>UCNMCHAR: Hetzeflde als LCNMCHAR, alleen dan voor <em>uppercase</em> karakters.</li>
 			<li>NAMECASE: Hiermee kan de strictheid van de parser worden bepaald met betrekking tot kleine en grote letters. Twee variabelen kunnen worden toegewezen met ofwel NO, ofwel YES. GENERAL is de eerste, wanneer deze aan staat wordt er over het geheel geen onderscheid tussen klein en groot gemaakt. ENTITY doet hetzelfde, maar dan alleen voor karakters in entiteiten.
 		</ul>
@@ -192,7 +195,7 @@ Een SGML-document is opgebouwd uit entiteiten. De SGML-declaratie zit in de eers
 
 <h3 id="features_clausule">FEATURES clausule</h3>
 <p>
-	In de clausule kunnen bepaalde eigenschappen van het <em>parsen</em> worden aangestuurd. Deze parameters heten <em>features</em> en worden opgedeeld in drie sub-clausules, ofwel categorieen: MINIMIZE, LINK en OTHER. De catagorie MINIMIZE behelst <em>features</em> die toestaan dat bepaalde onderdelen van de syntaxis mogen worden weggelaten, zodat de code beknopt blijft. De LINK catagorie gaat over <em>features</em> die helpen bij het linken van attributen naar bepaalde elementen en de overige <em>features</em> zitten in de catagorie OTHER.
+	In de clausule kunnen bepaalde eigenschappen van het <em>parsen</em> worden aangestuurd. Deze parameters heten <em>features</em> en worden opgedeeld in drie sub-clausules, ofwel categorie&euml;n: MINIMIZE, LINK en OTHER. De catagorie MINIMIZE behelst <em>features</em> die toestaan dat bepaalde onderdelen van de syntaxis mogen worden weggelaten, zodat de code beknopt blijft. De LINK catagorie gaat over <em>features</em> die helpen bij het linken van attributen naar bepaalde elementen en de overige <em>features</em> zitten in de catagorie OTHER.
 </p>
 <p>
 	Een feature kan binnen zijn sub-clausule worden aan- of uitgezet met de volgende syntax: <span class="code">&ltfeature naam&gt;&nbsp;&nbsp;[YES/NO]</span>.
@@ -219,7 +222,7 @@ Een SGML-document is opgebouwd uit entiteiten. De SGML-declaratie zit in de eers
 	<tr>
 		<td>RANK</td>
 		<td>MINIMIZE</td>
-		<td>Identifiers mogen door de DTD nu worden opgesplitst in een stem en een suffix. Hierdoor kan een boomhierarchie worden aangelegd in het document.</td>
+		<td>Identifiers mogen door de DTD nu worden opgesplitst in een <em>stem</em> en een <em>suffix</em>. Hierdoor kan een boomhierarchie worden aangelegd in het document.</td>
 	</tr>
 	<tr>
 		<td>SHORTTAG</td>
@@ -239,7 +242,7 @@ Een SGML-document is opgebouwd uit entiteiten. De SGML-declaratie zit in de eers
 	<tr>
 		<td>EXPLICIT</td>
 		<td>LINK</td>
-		<td>Bij expliciet linken moeten links in de DTD verwijzen naar een andere SGML-document.</td>
+		<td>Bij expliciet linken moeten links in de DTD verwijzen naar een ander SGML-document.</td>
 	</tr>
 	<tr>
 		<td>CONCUR</td>
@@ -254,13 +257,13 @@ Een SGML-document is opgebouwd uit entiteiten. De SGML-declaratie zit in de eers
 	<tr>
 		<td>FORMAL</td>
 		<td>OTHER</td>
-		<td>Entieiten met de PUBLIC identifier moeten nu voldoen aan de regels die hierbij zijn opgesteld, waardoor de parser stricter wordt</td>
+		<td>Entieiten met de PUBLIC identifier moeten nu voldoen aan de regels die hierbij zijn opgesteld, waardoor de parser stricter wordt.</td>
 	<tr/>
 </table>
 
 <h3 id="sgmlref_keyword">SGMLREF keyword</h3>
 <p>
-	Bij een groot aantal clausules of sub-clausules kan het keyword SGMLREF worden gebruikt om aan te geven dat de bijbehorende definitie zich in een apart 'standaard' SGML-bestand bevindt. Het is dan nog steeds mogelijk om waardes toe te voegen aan de desbetreffende clausule, die worden dan overschreven. In essentie worden hiermee alle standaard waardes van SGML eerst geimporteerd en hoeven daarna alleen nog maar de nodige wijzigingen worden gemaakt. Vaak worden in de SGML declaratie echter bij bijna elke clausule SGMLREF's gebruikt, zo wordt de standaard SGML-syntaxis aangehouden.
+	Bij een groot aantal clausules of sub-clausules kan het keyword SGMLREF worden gebruikt om aan te geven dat de bijbehorende definitie zich in een apart 'standaard' SGML-bestand bevindt. Het is dan nog steeds mogelijk om waardes toe te voegen aan de desbetreffende clausule, die worden dan overschreven. In essentie worden hiermee alle standaard waardes van SGML eerst geimporteerd en hoeven daarna alleen nog maar de nodige wijzigingen worden gemaakt. Vaak worden in de SGML declaratie daarom bij bijna elke clausule SGMLREF's gebruikt, zo wordt de standaard SGML-syntaxis aangehouden.
 </p>
 
 <div id="sources">

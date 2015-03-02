@@ -2,10 +2,12 @@
 
 <h3 id="ontstaan_van_sgml">Ontstaan van SGML</h3>
 <p>
-	SGML zoals we het nu kennen, is het resultaat van een groep mensen en een samensmelting van verschillende activiteiten, die de afgelopen decennia hebben plaatsgevonden. In de jaren &#39;60 begon het met het concept van generic coding, waarbij je ipv control codes of macros, descriptive tags ging gebruiken voor documenten. Er ontstond eind 1960 een project dat leidde tot een GenCode Comittee, wat later een belangrijke rol zou hebben voor het ontstaan van SGML.
+	SGML zoals we het nu kennen, is het resultaat van een groep mensen en een samensmelting van verschillende activiteiten, die de afgelopen decennia hebben plaatsgevonden. In de jaren &#39;60 begon het met het concept van generic coding, waarbij je in plaats van control codes of macros, descriptive tags ging gebruiken voor documenten. Er ontstond eind 1960 een project dat leidde tot een GenCode Comittee, wat later een belangrijke rol zou hebben voor het ontstaan van SGML.
+	(<a href="http://www.sgmlsource.com/history/sgmlhist.htm" title="SGML Users' Group, 1990. A Brief History of the Development of SGML">SGML Users' Group, 1990</a>)
 </p>
 <p>
-	In 1969 leidde Charles Goldfarb een IBM onderzoek naar informatie systemen bij advocatenkantoren. Samen met zijn team ontstond toen de Generalized Markup Language (GML) als middel om de informatie systemen documenten te laten delen.
+	In 1969 leidde Charles Goldfarb een IBM onderzoek naar informatiesystemen bij advocatenkantoren. Samen met zijn team ontstond toen de Generalized Markup Language (GML) als middel om de informatiesystemen documenten te laten delen.
+	(<a href="http://en.wikipedia.org/wiki/Standard_Generalized_Markup_Language" title="Wikipedia, 2015. Standard Generalized Markup Language">Wikipedia, 2015</a>)
 </p>
 <p>
 	GML was gebaseerd op het Generic Coding concept van Rice en Tunnicliffe. Maar in plaats van een simpel tag-schema, introduceerde GML het concept van formeel-gedefinieerde document types met een element structuur. Nadat GML af was, ging Goldfarb door met onderzoek doen en het toevoegen van extra concepten, zoals als references, link processen, en concurrent document types. Deze concepten werden later onderdeel van SGML.
@@ -41,12 +43,13 @@
 <h3 id="sgml_en_html5">SGML en HTML5</h3>
 <p>
 	Alhoewel de syntax van HTML veel weg heeft van een SGML-subset, heeft HTML5 ervoor gezorgd dat het zichzelf geen applicatie meer kan noemen van SGML, door hun eigen parser regels te defini&euml;ren.
+	(<a href="http://dev.w3.org/html5/html-author/" title="W3C, 2010. HTML5 Reference">W3C, 2010</a>)
 </p>
 <p>
 	Wel hebben ze ervoor gezorgd dat het backwards compatible is met oudere versies van HTML. De tag met DOCTYPE origineert van SGML en werd in vorige versies van HTML gebruikt als een referentie naar een Document Type Definition - een formele declaratie van de elementen, attributen en syntactische kenmerken die gebruikt kunnen worden in het document.
 </p>
 <p>
-	Nu HTML5 formeel gezien niet meer gebaseerd is op SGML, heeft de DOCTYPE niet langer deze functie, en refereert dus niet meer naar een DTD. De DOCTYPE triggert no-quirks mode in de browsers, waar HTML5 er 3 van kent: Quirks mode, limited quirks mode en no quirks mode. 
+	Nu HTML5 formeel niet meer gebaseerd is op SGML, heeft de DOCTYPE niet langer deze functie, en refereert dus niet meer naar een DTD. De DOCTYPE triggert no-quirks mode in de browsers, waar HTML5 er 3 van kent: Quirks mode, limited quirks mode en no quirks mode. 
 </p>
 <p>
 	Verder gaan we niet dieper in op HTML5, aangezien dat niet ons doel is, op andere websites is veel te vinden over hoe HTML5 precies in elkaar zit.
@@ -54,27 +57,28 @@
 
 <h3 id="van_sgml_tot_xml">Van SGML tot XML</h3>
 <p>
-Het ontstaan van de Extensible Markup Language (XML) is weer een uitwerking van het werk van Charles Goldfarb toen hij de Standardised Generalised Markup Language (SGML) creeërde. Zoals bekend is SGML zelf geen mark-up taal, maar wordt het gebruikt om woordenboeken te maken die documenten kan noteren met structurele tags. 
+	Het ontstaan van de Extensible Markup Language (XML) is weer een uitwerking van het werk van Charles Goldfarb toen hij de Standardised Generalised Markup Language (SGML) creeërde. Zoals bekend is SGML zelf geen mark-up taal, maar wordt het gebruikt om woordenboeken te maken die documenten kan noteren met structurele tags. 
 </p>
 <p>
-Toen de HyperText Markup Language (HTML) ontworpen werd door Tim Berners Lee aan het einde de tachtige jaren, werd dit beschouwd als de meest populaire applicatie van SGML. 
-Sinds het is ontworpen, is HTML eigenlijk slachtoffer geworden van zijn eigen populariteit, aangezien ze zo snel ontwikkelde en uitbreidde, dat ze hun originele visie meer konden bereiken. Tot op de dag van vandaag blijft HTML erg populair, als een presentatie technologie, maar het wordt wel verklaard als ongeschikt als een data storage format. 
-Als het aankomt op het data storage, dan is HTML hiervoor ongeschikt, want het is origineel gezien bedoelt voor presentatie mogelijkheden. SGML is dan weer te complex in gebruik voor dit doel. Hierdoor is dan XML gemaakt. 
+	Toen de HyperText Markup Language (HTML) ontworpen werd door Tim Berners Lee aan het einde de tachtige jaren, werd dit beschouwd als de meest populaire applicatie van SGML. 
+	Sinds het is ontworpen, is HTML eigenlijk slachtoffer geworden van zijn eigen populariteit, aangezien ze zo snel ontwikkelde en uitbreidde, dat ze hun originele visie niet meer konden bereiken. Tot op de dag van vandaag blijft HTML erg populair, als een presentatie technologie, maar het wordt wel verklaard als ongeschikt als een data storage format. 
+	Als het aankomt op het data storage, dan is HTML hiervoor ongeschikt, want het is origineel bedoelt voor presentatie mogelijkheden. SGML is dan weer te complex in gebruik voor dit doel. XML biedt hier een oplossing voor.
 </p>
 <p>
-De Extensible Markup Language (XML) wordt gezien als de brug tussen HTML en SGML, aangezien XML leesbaar is voor mens en machine, terwijl het flexibel genoeg blijft om platform en architectuur onafhankelijk, data uitwisseling ondersteunt. 
-Er zijn twee manieren om de structuur van een XML document te beschrijven. Dit is te doen met Data Type Definition (DTD) documenten of met een XML schema.
-De DTD is geïntroduceerd door SGML, terwijl een XML schema is geschreven met gebruik van de XML syntax. Beide mogelijkheden geven specificaties over constraint regels die toegepast zijn op een XML document. 
+	De Extensible Markup Language (XML) wordt gezien als de brug tussen HTML en SGML, aangezien XML leesbaar is voor mens en machine, terwijl het flexibel genoeg blijft om platform- en architectuuronafhankelijk data uitwisseling te ondersteunen. 
+	Er zijn twee manieren om de structuur van een XML document te beschrijven. Dit is te doen met Data Type Definition (DTD) documenten of met een XML schema.
+	De DTD is geïntroduceerd door SGML, terwijl een XML schema is geschreven met gebruik van de XML syntax. Beide mogelijkheden geven specificaties over constraint regels die toegepast zijn op een XML document. 
 </p>
 <p>
-De Document Type Definition is meer gepast bij het gebruik van HTML, DTD kan namelijk de structuur van een document definiëren, maar het heeft geen regels die toegepast kunnen worden als het om data gaat. DTD ziet al de data in een document als een string. Dit is natuurlijk perfect voor een document markup language, maar niet als je de data in het document wil beheren. 
+	De Document Type Definition is meer gepast bij het gebruik van HTML, DTD kan namelijk de structuur van een document definiëren, maar het heeft geen regels die toegepast kunnen worden als het om data gaat. DTD ziet al de data in een document als een string. Dit is natuurlijk perfect voor een document markup language, maar niet als je de data in het document wil beheren. 
 </p>
 <p>
-Om dit gebrek aan te vullen is het XML Schema Language gecreeërd in 2000. Een XML schema definieert veel meer data types en het geeft specificaties die niet alleen toegepast worden op de structuur van het XML document, maar ook op de inbegrepen data. 
-Hiermee kun je bijvoorbeeld een XML tag definiëren met het type: nonNegativeInteger. Een geldige XML parser zorgt dan voor een foutmelding van het document als de data geen integer is die groter is dan 0.
+	Om dit gebrek aan te vullen is het XML Schema Language gecreeërd in 2000. Een XML schema definieert veel meer data types en het geeft specificaties die niet alleen toegepast worden op de structuur van het XML document, maar ook op de inbegrepen data. 
+	Hiermee kun je bijvoorbeeld een XML tag definiëren met het type: nonNegativeInteger. Een geldige XML parser zorgt dan voor een foutmelding van het document als de data geen integer is die groter is dan 0.
 </p>
 <p>
-Voor verdere informatie over XML en XML-schema’s, is er genoeg te vinden. Deze website gaat niet verder in op hoe XML werkt.
+	Voor verdere informatie over XML en XML-schema’s, is er genoeg externe informatie beschikbaar. Deze website gaat niet verder in op hoe XML werkt.
+	(<a href="http://www.textuality.com/xml/faq.html" title="textuality.com. Extensible Markup Language Frequently Asked Questions">textuality.com</a>)
 </p>
 
 <img src="images/img_sgml_relations.png" alt="SGML heeft veel relaties met andere talen en standaards." />

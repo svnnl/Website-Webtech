@@ -2,6 +2,7 @@
 
 <p>
 	Het tweede onderdeel van een SGML-document is de Document Type Definition, hierin wordt de syntax van de gebruikte markup-taal in het SGML-document beschreven.
+	(<a href="http://en.wikipedia.org/wiki/Document_type_definition" title="Wikipedia, 2015. Document type definition">Wikipedia, 2015</a>)
 </p>
 <p>
 	De DTD is een schema-technologie die gebruikt wordt in SGML en daarbij ook in de subsets van SGML, als HTML en XML. Een DTD wordt voornamelijk gebruikt zodat een groep met personen een standaard DTD kan gebruiken of vaststellen voor het uitwisselen van data. Een bepaalde applicatie kan een DTD gebruiken om vast te stellen of bepaalde data die je binnen krijgt geldig is.
@@ -11,6 +12,7 @@
 </p>
 <p>
 	Een DTD bestaat grof weg uit 5 "bouwstenen":
+	(<a href="http://www.w3schools.com/DTD/default.asp" title="W3Schools. DTD Tutorial">W3Schools</a>)
 </p>
 <ol type="1">
 	<li>Elementen</li>
@@ -43,15 +45,15 @@ Het verschil tussen deze twee kan worden geextraheerd uit de betekenis. PCDATA s
 	<span class="code">&lt;!ELEMENT <em>name</em> (<em>content</em>)&gt;</span>
 </p>
 <p>
-	Elementen zonder content, zoals het hiervoor beschreven "<em>br</em>"-element, vallen onder de catagorie EMPTY. De DTD-code benodigd om het "<em>br</em>"-element te beschrijven is dus als volgt:
+	Elementen zonder content, zoals het hiervoor beschreven "<em>br</em>"-element, vallen onder de categorie EMPTY. De DTD-code benodigd om het "<em>br</em>"-element te beschrijven is dus als volgt:
 	<br/><span class="code">&lt;!ELEMENT br EMPTY&gt;</span>
 </p>
 <p>
-	Verder kan een element content hebben, onder andere is het mogelijk om te kiezen ofwel een element PCDATA in zich dient te hebben, ofwel CDATA ofwel een combinatie van de twee. Voor PCDATA kan de volgende code worden gebruikt:
+	Verder kan een element content hebben. Onder andere is het mogelijk om te kiezen ofwel een element PCDATA in zich dient te hebben, ofwel CDATA, ofwel een combinatie van de twee. Voor PCDATA kan de volgende code worden gebruikt:
 	<br/><span class="code">&lt;!ELEMENT foo (#PCDATA)&gt;</span> en voor CDATA: <span class="code">&lt;!ELEMENT bar (#CDATA)&gt;</span>
 </p>
 <p>
-	Om voor beide in aanmerking te komen dient het element aan de catagorie ANY worden toegevoegd: <span class="code">&lt;!ELEMENT foobar ANY&gt;</span>
+	Om voor beide in aanmerking te komen dient het element aan de categorie ANY worden toegevoegd: <span class="code">&lt;!ELEMENT foobar ANY&gt;</span>
 </p>
 <p>
 	Om sub-elementen aan elementen toe te voegen is een geheel andere syntax nodig. Sub-elementen toestaan binnen een bepaald element kan op de volgende manier:
@@ -86,7 +88,7 @@ Het verschil tussen deze twee kan worden geextraheerd uit de betekenis. PCDATA s
 </p>
 <p>
 	Attributen definieren in de DTD gebeurt met de volgende syntax:
-	<br/><span class="code">&lt;!ATTLIST <em>element-name</em> <em>name</em> <em>type</em> <em>value</em></span>
+	<br/><span class="code">&lt;!ATTLIST <em>element-name</em> <em>name</em> <em>type</em> <em>value</em>&gt;</span>
 </p>
 <p>
 	<em>element-name</em> verwijst naar het element - die ook gedefinieerd dient te zijn in de DTD - waar het attribuut in gebruikt mag worden.
@@ -99,12 +101,12 @@ Het verschil tussen deze twee kan worden geextraheerd uit de betekenis. PCDATA s
 	De derde parameter is <em>type</em> en zeg iets over de waarde van het attribuut. Een aantal van de meest gebruikte opties voor type zijn:
 </p>
 <ul>
-	<li><span class="code">CDATA</span>: Het attribuut bevat normale data, die niet verder <em>geparsed</em> hoeft te worden. Deze wordt in de praktijk bijna altijd gebruikt.</li>
-	<li><span class="code">ID</span>: De waarde is een unieke ID-waarde.</li>
-	<li><span class="code">IDREF</span>: De waarde is een verwijzing naar het ID van een attribuut van een ander element.</li>
-	<li><span class="code">IDREFS</span>: Een lijst van IDREF's.</li>
-	<li><span class="code">ENTITY</span>: De waarde is een entiteit.</li>
-	<li><span class="code">ENTITIES</span>: De waarde is een lijst van entiteiten.
+	<li><p><span class="code">CDATA</span>: Het attribuut bevat normale data, die niet verder <em>geparsed</em> hoeft te worden. Deze wordt in de praktijk bijna altijd gebruikt.</p></li>
+	<li><p><span class="code">ID</span>: De waarde is een unieke ID-waarde.</p></li>
+	<li><p><span class="code">IDREF</span>: De waarde is een verwijzing naar het ID van een attribuut van een ander element.</p></li>
+	<li><p><span class="code">IDREFS</span>: Een lijst van IDREF's.</p></li>
+	<li><p><span class="code">ENTITY</span>: De waarde is een entiteit.</p></li>
+	<li><p><span class="code">ENTITIES</span>: De waarde is een lijst van entiteiten.</p></li>
 	<li>
 		<p>
 			Lijst van mogelijkheden: hiermee kan de waarde van het attribuut beperkt worden tot een lijst van mogelijkheden. Bijvoorbeeld:
@@ -124,8 +126,8 @@ Het verschil tussen deze twee kan worden geextraheerd uit de betekenis. PCDATA s
 De laatste parameter van de syntax voor attributen is <em>value</em> en kan de volgende waardes hebben:
 </p>
 <ul>
-	<li><span class="code">#REQUIRED</span>: Dit betekent dat het attribuut verplicht in het bijbehorende element moet zijn opgegeven.</li>
-	<li><span class="code">#IMPLIED</span>: Wanneer het attribuut niet verplicht is en ook geen standaard waarde.</li>
+	<li><p><span class="code">#REQUIRED</span>: Dit betekent dat het attribuut verplicht in het bijbehorende element moet zijn opgegeven.</p></li>
+	<li><p><span class="code">#IMPLIED</span>: Wanneer het attribuut niet verplicht is en ook geen standaard waarde heeft.</p></li>
 	<li>
 		<span class="code">#FIXED "<em>value</em>"</span>: Wanneer een attribuut verplicht aanwezig moet zijn en daarbij de opgegeven waarde vooraf al is bepaald.</li.
 		<p>
@@ -157,10 +159,10 @@ De laatste parameter van de syntax voor attributen is <em>value</em> en kan de v
 </p>
 <p>
 	Nu kan een site de volgende paragraaf renderen:
-	&lt;p&gt;&amp;version;&lt;/p&gt;
+	<br/><span class="code">&lt;p&gt;&amp;version;&lt;/p&gt;</span>
 </p>
 <p>
-	Uiteindelijk komt er dan - mits het HTML-document in zijn DTD de version entiteit goed heeft gedefineerd - "<em>HTML 4.0 Transitional</em>" op het scherm te staan.
+	Uiteindelijk komt er dan - mits het HTML-document in zijn DTD de version entiteit goed heeft gedefineerd - "HTML 4.0 Transitional" op het scherm te staan.
 </p>
 
 <div id="sources">
