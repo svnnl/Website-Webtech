@@ -26,6 +26,11 @@ td {
 	padding: 8px;
 }
 
+fieldset {
+	margin-top: 20px;
+	font-family: Arial, serif;
+}
+
 img {
 	display: block;
     margin-left: auto;
@@ -33,6 +38,15 @@ img {
 	margin-top: 40px;
 	margin-bottom: 40px;
 	border: 1px solid gray;
+}
+
+div#images {
+	margin: 10px;
+}
+
+div#images img {
+	float: left;
+	margin: 10px;
 }
 
 p.code, span.code {

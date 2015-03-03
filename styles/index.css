@@ -24,7 +24,14 @@ div#index a.top {
 	margin-bottom: 12px;
 }
 
+div#index2 h3 {
+	cursor: pointer;
+	margin-left: 40px;
+}
+
 a.toindex {
+	clear: both;
+	display: block;
 	cursor: pointer;
 	text-decoration: underline;
 	font-family: Arial, serif;

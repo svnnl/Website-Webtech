@@ -1,0 +1,43 @@
+<script type="text/javascript">
+	$(document).ready(function() {
+	    $("#flickr_search_button").click(function() {
+	    	// Remove old content
+			$(".images").empty();
+
+	        $.ajax({
+	        	// Call Flickr api using json
+	            url: "https://api.flickr.com/services/rest",
+	            dataType: "jsonp",
+	            data: {
+	                api_key: "918d7d98cc6dd5aba435e4973db24845",
+	                format: "json",
+	                method: "flickr.photos.search",	
+	                text: $("#flickr_search_text").val()
+	            },
+	            jsonpCallback: "jsonFlickrApi",
+	            success: function(data) {
+	                $.each(data.photos.photo, function(i, photo) {
+	                	var photoId = photo.id;
+						var farmId = photo.farm;
+	                    var secretId = photo.secret;
+						var serverId = photo.server;
+
+						// URL of resource
+						var href = "https://farm" + farmId + ".staticflickr.com/" + serverId +  "/" + photoId + "_" + secretId + "_q.jpg";
+
+						// Add photo to #images element
+						$("#images").append("<a href='" + href + "'><img src='" + href + "'/></a>");
+					});
+	            }
+	        });
+	    })
+	});
+</script>
+<fieldset>
+	<legend>Flickr API</legend>
+	<input id="flickr_search_text" type="text" />
+	<button id="flickr_search_button">Search</button>
+</fieldset>
+<div id="images">
+
+</div>

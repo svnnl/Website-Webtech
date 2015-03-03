@@ -17,6 +17,10 @@ function init_index() {
 			navigate_to(chapter, $(this).text());
 		}
 	});
+
+	$("div#index2 h3").click(function() {
+		navigate_to($(this).text());
+	});
 	
 	$("a.toindex").fadeOut();
 }
