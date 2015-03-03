@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flot</title>
+	
+	<script type="text/javascript" src="../js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="../js/flot/jquery.flot.js"></script>
+	
+</head>
+<body>
+	<h1>SGML Chart</h1>
+	<div id="placeholder" style="width:500px; height:300px;"></div>
+</body>
+<script type="text/javascript">
+var data, data1, options, chart;
+data1 = 
+data = [data1];
+options = {};
+$(document).ready(function() {
+chart1 = $.plot($("#placeholder"), [ [[0, 0], [1, 1]] ], { yaxis: { max: 1 } });
+</script>
+</html>
