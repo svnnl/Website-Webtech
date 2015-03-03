@@ -9,14 +9,45 @@
 </head>
 <body>
 	<h1>SGML Chart</h1>
-	<div id="placeholder" style="width:500px; height:300px;"></div>
+	<p>
+	Een dynamische grafiek die het verschil aangeeft in gebruik van SGML, XML en HTML.
+	Waarbij SGML het rode vlak voorstelt, <br>
+	XML het blauwe, <br>
+	en HTML het gele vlak.<br>
+	Op de x-as staat de tijd aangegeven en y-as het gebruik in percentages.
+	</p>
+	<div id="placeholder" style="height: 200px; width: 400px;" class="demo-placeholder"></div>
 </body>
 <script type="text/javascript">
-var data, data1, options, chart;
-data1 = 
-data = [data1];
-options = {};
-$(document).ready(function() {
-chart1 = $.plot($("#placeholder"), [ [[0, 0], [1, 1]] ], { yaxis: { max: 1 } });
+$(function() {
+    
+    var d1 = [ { label : 'SGML'}];
+    for (var i = 0; i <= 10; i += 1) {
+        d1.push([i, parseInt(Math.random() * 30)]);}
+    
+    var d2 = [];
+    for (var i = 0; i <= 10; i += 1) {
+        d2.push([i, parseInt(Math.random() * 30)]);}
+    
+    var d3 = [];
+    for (var i = 0; i <= 10; i += 1) {
+        d3.push([i, parseInt(Math.random() * 30)]);}
+    
+    $.plot("#placeholder", [ d1, d2, d3 ], {
+        series: {stack: true,
+                 lines: {show: true, fill: true, }, }
+    });
+    $.plot("#placeholder2", [ d1, d2, d3 ], {
+        series: { stack: true,
+                 lines: {show: true, fill: true, }, 
+                curvedLines: {  active: true, fit: true, apply: true },},                
+                yaxis:{
+                    tickFormatter: function(val, axis){
+                        return (val/2).toFixed(0);
+                    }
+                }
+    });
+});
+
 </script>
 </html>
