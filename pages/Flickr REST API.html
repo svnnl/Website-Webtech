@@ -7,24 +7,45 @@
 	
 <script type="text/javascript">
 $(document).ready(function() {
-         $.getJSON('https://api.flickr.com/services/rest/?method=flickr.photos.search&tags=thor&api_key=918d7d98cc6dd5aba435e4973db24845&format=json',function(data)
-         {
-          var items=[];
-           $(data).find("photo").each(function(index, value) {
-             var ident=(value.id);
-             var secret_id=(value.secret);
-             var farm_id=(value.farm);
-             var server_id=(value.server);
-                $("#target").append("<img src='http://farm" + farm_id + "static.flickr.com/" + server_id + "/" + ident + "_" + secret_id + "_" + "s.jpg'/>");
-             });
-             });
-             });
+    $("#searchOption").val();
+    $("#searchButton").click(function() {
+		$(".images").empty();
+        $.ajax({
+            url: "https://api.flickr.com/services/rest",
+            jsonpCallback: "jsonFlickrApi",
+            dataType: "jsonp",
+            data: {
+                api_key: "918d7d98cc6dd5aba435e4973db24845",
+                format: "json",
+                method: "flickr.photos.search",	
+                text: $("#searchOption").val()
+            },
+            success: function(data) {
+                console.log(data);
+                $.each(data.photos.photo, function(index, photo) {
+					console.log(photo);
+					var farm_id = photo.farm;
+                    var secret_id = photo.secret;
+					var server_id = photo.server;
+					var ident = photo.id;
+					var imagelink = "https://farm" + farm_id + ".staticflickr.com/" + server_id + "/" + ident + "_" + secret_id +"_q.jpg"
+
+                    addImage("<a href=" + imagelink + ">" + "<img src=\"" + imagelink + "\" title=\"" + ident + "_" + secret_id + "_q.jpg\">" + "</a>");
+                });
+            }
+        });
+    })
+});
+
+function addImage(data) {
+    $(".images").append(data);
+	}
+
 			 
 </script>
 </head>
 <body>
-<div id="target">
 
-</div>
+
 </body>
 </html>
